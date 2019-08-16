@@ -1,4 +1,19 @@
 ==============================================================================================================
+NOTE:  The questions shown here are taken from the different sources from the Google and other websites.
+
+You may find these questions in different websites. This file is created to keep the things in a single platform for 
+the easy understanding.
+
+Questions are segregated on the topic level.
+
+Can share with the friends and one can contribute in the repository with different file names for the answers in the following 
+formats.
+
+<QUESTION_NO>_ANSWER_JAVA_INTERVIEW_QUESTIONS.txt 
+
+Use the above format to contribute the answers.
+
+==============================================================================================================
 Following Questions are based on the following topics on the java
 
 	#	Overview
@@ -11,7 +26,11 @@ Following Questions are based on the following topics on the java
 	#	Initializers , Constructors and static modifiers
 	#	Annotations
 	#	Annotation-types-processing
+	#	Java Classes & Interfaces
 ==============================================================================================================
+				===========================
+						OVERVIEW
+				===========================
 
 Q1. Why use Java?
 
@@ -247,3 +266,93 @@ Q83. What do you understand by annotation of annotation? How do you control when
 
 Q84. What are the different annotation types?
 
+				===========================
+						Java Classes & Interfaces
+				===========================
+				
+Q85. Which class declaration is correct if A and B are classes and C and D are interfaces?
+		
+		a) class Z extends A implements C, D{}
+		b) class Z extends A,B implements D {}
+		c) class Z extends C implements A,B {}
+		d) class Z extends C,D implements B {}
+		
+Q86. What happens when a parent and a child class has the same variable name?
+
+Q87. What happens when the parent and the child class has the same non-static method with the same signature?
+
+Q88. What happens when the parent and the child class has the same static method with the same signature?
+
+Q87. What is the difference between an abstract class and an interface and when should you use them?
+
+Q88. When will you use an abstract class?
+
+Q89. When will you use an interface?
+
+Q90. What is a marker or a tag interface? Why there are some interfaces with no defined methods (i.e. marker interfaces) in Java?
+
+Q91. What is a functional interface?
+
+Q92. What does the @FunctionalInterface do, and how is it different from the @Override annotation?
+
+Q93. Does Java 8 solve the “diamond problem” discussed earlier? If yes how?
+
+Q94. Does Java 8 solve the need to have a separate helper classes? For example, you have
+
+		1) java.util. Collection interface and a separate java.util.Collections helper class with static methods.
+		2) java.nio.file.Path interface and a separate java.util.Paths helper or utility class with static methods.
+		
+Q95. Does this mean that abstract classes may not be required as you can have default and static methods in Java 8 interfaces?
+
+				===========================
+						Abstract Classes VS Interfaces
+				===========================
+
+Q96. When to use an abstract class over an interface?
+
+Q97. What is a diamond problem?
+
+Q98. Does Java support multiple inheritance?
+
+Q99. What is the purpose of an abstract class? 
+
+Q100. Should it have at least one abstract member?
+
+Q101. Can you give an example of an abstract class where it is used prevalently? 
+
+Q102. What is the purpose of an interface?
+
+Q103. What are the differences between abstract classes and interfaces?
+
+Q104. What is the diamond problem?
+
+Q105. When to use an abstract class over an interface?
+
+Q106. What are the different ways to get code reuse?
+
+Q107. What is the difference between the default methods introduced in Java 8 and regular methods?
+
+				===========================
+						Class Loading
+				===========================
+				
+Q108. What do you know about Java class loading? Explain Java class loaders?
+
+Q109. Explain static vs. dynamic class loading?
+
+Q110. What is the difference between the following approaches?
+
+Q111. What are the different ways to create a “ClassLoader” object?
+
+Q112. How to load property file from classpath?
+
+Q113. What is the benefit of loading a property file from classpath?
+
+Q114. What tips would you give to someone who is experiencing a class loading or “Class Not Found” exception?
+
+				===========================
+						Java Object Class Methods
+				===========================
+
+Q115. 				
+				
