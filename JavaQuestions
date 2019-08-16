@@ -13,6 +13,8 @@ formats.
 
 Use the above format to contribute the answers.
 
+NOTE: In Future A project will be created to answer all these questions so user can directly get into the question and answer 
+		with a single click.
 ==============================================================================================================
 Following Questions are based on the following topics on the java
 
@@ -27,6 +29,14 @@ Following Questions are based on the following topics on the java
 	#	Annotations
 	#	Annotation-types-processing
 	#	Java Classes & Interfaces
+	#	Abstract Classes VS Interfaces
+	#	Class Loading
+	#	Java Object Class Methods
+	#	Object Class Wait & Notify Methods
+	#	equals() Vs == & Pass by reference vs Pass by value
+	#	Immutable Objects
+	#	Serialization , Cloning & Casting
+	#	OOPS
 ==============================================================================================================
 				===========================
 						OVERVIEW
@@ -354,5 +364,215 @@ Q114. What tips would you give to someone who is experiencing a class loading or
 						Java Object Class Methods
 				===========================
 
-Q115. 				
+Q115. What are the non-final methods in Java Object class, which are meant primarily for extension?			
+
+Q116. Are these methods easy to implement correctly?
+
+Q117. What are the implications of implementing them incorrectly?
+
+Q118. So, when we retrieve the object with a specific key, how does it know which one of two objects to return?
+
+Q119. What if you change the hashCode() method of the “MyKey” class to always return a constant value of? Will you be able to add objects to the map?
+
+Q120. If a class overrides the equals( ) method, what other method it should override? What are some of the key considerations while implementing these methods?
+
+Q121. Why or when should you override a toString( ) method?
+
+Q122. Can you override clone( ) and finalize( ) methods in the Object class? How do you disable a clone( ) method?
+
+				===========================
+						Object Class Wait & Notify Methods
+				===========================
 				
+Q123. How do Java threads communicate with each other?
+
+Q124. What must you know about using wait () and notifyAll( ) properly?
+
+Q125. Why wait/notify methods are in the java.lang.Object class and not in the java.lang.Thread class?
+
+				===========================
+						equals() Vs == & Pass by reference vs Pass by value
+				===========================
+				
+Q126. What is the difference between “==” and equals(..) method when comparing 2 objects?
+
+Q127. What happens when you run the following code?
+
+	Example:
+		Boolean b1  = new Boolean(false); 
+		Boolean b2  = Boolean.FALSE; 
+    
+		if(b1 == b2) {
+			System.out.println("Equal");
+		}
+		else{
+			System.out.println("Not Equal"); 
+		}
+
+Q128. Can you discuss the output of the following code?
+
+	Example:
+		
+	public class PrimitiveAndObjectEquals {
+
+		public static void main(String[ ] args) {
+			int a = 5;
+			int b = 5;
+
+			Integer c = new Integer(5);
+			Integer d = new Integer(5);
+
+			if (a == b) {  //Line 1
+				System.out.println("primitives a and b are ==");
+			}
+
+			if (c == d) {  //Line 2
+				System.out.println("Objects c and d are ==");
+			}
+
+			if (c.equals(d)) {  //Line 3
+				System.out.println("Objects c and d are equals( )");
+			}
+
+			if (a == d) { //Line 4
+				System.out
+					.println("Primitive a and Object d are == due to auto unboxing");
+			}
+		}
+	}
+	
+Q129. Can you discuss the output of the following code?
+
+	Example:
+
+		public class EnumEquals {
+			
+		  public enum Action {START, STOP, CONTINUE}
+			
+		  private static Action action = Action.STOP;
+			
+		  public static void main(String[ ] args) {
+				
+			  if(Action.STOP == action){
+				  System.out.println("Enumurations can be compared to ==.");
+			  }
+				
+			  if(Action.STOP.equals(action)){
+				  System.out.println("Enumurations can be compared to equals( ) also.");
+			  } 
+			}
+		}
+
+Q130. Explain the statement Java is always pass by value?
+
+Q131. The value of Point p before the following method calls is (10,20). What will be the value of Point p after executing the following method calls?
+
+Q132. If there is a source array list with 15MB of data, and then you create a new target empty array list and copy the source to target with
+		target.addAll(source). How much memory will be consumed after invoking the addAll(…) method?	
+
+				===========================
+						Immutable Objects
+				===========================
+				
+Q133. What is an immutable object?
+
+Q134. How do you create an immutable type?
+
+Q135. Is the following class immutable?
+
+	Example:
+	
+		import java.util.Arrays;
+
+		public final class MyImmutable {
+
+			private final Integer[ ] myArray;
+
+			public MyImmutable(Integer[ ] anArray) {
+				  this.myArray = anArray;
+			}
+
+			public Integer[ ] getMyArray( ) {
+				return myArray;
+			}
+
+			//....equals(), hashCode(), etc
+
+			@Override
+			public String toString() {
+				return Arrays.toString(myArray);
+			}
+		} 		
+		
+Q136. What are the advantages of immutable objects?
+
+Q137. Why is it a best practice to implement the user defined key class as an immutable object?
+
+Q138. How would you defensively copy a Date field in your immutable class?
+
+Q139. How will you prevent the caller from adding or removing elements from a collection of pets?
+
+Q140. Can builder design pattern be used to create immutable objects?
+
+Q141. Can you give a builder design pattern example to create immutable objects?
+
+				===========================
+						Serialization , Cloning & Casting
+				===========================		
+				
+Q142. Which Java interface must be implemented by a class whose instances are transported via a Web service?
+
+Q143. What is serialization?
+
+Q144. How would you exclude a field of a class from serialization?
+
+Q145. What happens to static fields during serialization?
+
+Q146. What are the common uses of serialization? Can you give me an instance where you used serialization?
+
+Q147. What is a serial version id?
+
+Q148. Are there any disadvantages in using serialization?
+
+Q149. What is the difference between Serializable and Externalizable interfaces? How can you customize the serialization process?
+
+Q150. What is the main difference between shallow cloning and deep cloning of objects?
+
+Q151. What is type casting? Explain up casting vs. down casting? When do you get ClassCastException?
+
+				===========================
+						OOPS
+				===========================	
+				
+Q152. Is Java a 100% Object Oriented (OO) language? if yes why? and if no, why not?
+
+Q153. How to create a well designed Java application?
+
+Q154. What do you achieve through good class and interface design with OOP?
+
+Q155. What are the 4 main concepts of OOP?
+
+Q156. What problem(s) does abstraction and encapsulation solve?
+
+Q157. What is the difference between Abstraction & Generalization?
+
+Q158. What problem(s) does inheritance & composition solve?
+
+Q159. Can you explain the Java concepts like overloading, overriding, hiding & obscuring? Which one of these concepts lead to polymorphism?
+
+Q160. Given the following code snippets, can you explain the OOP concepts – abstraction, encapsulation, Inheritance, and polymorphism ?
+
+	Example:
+	
+		List<String> list = new ArrayList<>();
+		list.add("Java");
+		list.add("JEE");
+	You can elaborate with additional code examples using java.util.List methods.
+
+Q161. What is the relationship among “OOP“, “Design Principles“, and “Design Patterns” ?
+
+Q162. What is the difference between OOP & Functional Programming (i.e. FP)?
+
+Q163. If you are mentoring a junior developer, what tips would you give him/her on OOP?
+
+Q164. How would you go about writing loosely coupled Java application? 		
