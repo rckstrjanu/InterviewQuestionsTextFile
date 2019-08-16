@@ -1,0 +1,249 @@
+==============================================================================================================
+Following Questions are based on the following topics on the java
+
+	#	Overview
+	#	CompileTimeVsRunTime
+	#	Data types
+	#	Primitives & Object memory consumption
+	#	Autoboxing & Unboxing
+	#	Strings
+	#	Modifiers
+	#	Initializers , Constructors and static modifiers
+	#	Annotations
+	#	Annotation-types-processing
+==============================================================================================================
+
+Q1. Why use Java?
+
+Q2. Is Java a 100% Object Oriented (OO) language? if yes why? and if no, why not?
+
+Q3. What is the difference between C++ and Java?
+
+Q4. What is the main difference between the Java platform and the other software platforms?
+
+Q5. How would you differentiate JDK, JRE, JVM, and JIT?
+
+Q6. Is it possible to convert byte code into source code?
+
+Q7. When would you use a decompiler?
+
+Q8. Is it possible to prevent the conversion from byte code into source code?
+
+Q9. What are the two flavors of JVM?
+
+Q10. How do you know in which mode your JVM is running?
+
+Q11. What are the two different bits of JVM? What is the major limitation of 32 bit JVM?
+
+Q12. What are some of the JVM arguments you have used in your projects?
+
+Q13. How do you monitor the JVMs?
+
+Q14. What is a jar file? How does it differ from a zip file?
+
+Q15. What do you need to develop and run Java programs? How would you go about getting started?
+
+Q16. How do you create a class under a package in Java? What is the first statement in Java?
+
+Q17. What do you need to do to run a class with a main( ) method in a package? For example: Say, you have a class named Pet in a project folder
+	 C:\projects\Test\src and package named com.xyz.client, will you be able to compile and run it as it is?
+	 
+Q18. What is the difference between line A & line B in the following code snippet?
+
+		public class ConstantFolding {
+			static final  int number1 = 5;
+			static final  int number2 = 6;
+			static int number3 = 5;
+			static int number4= 6;
+			
+			public static void main(String[ ] args) {
+				  int product1 = number1 * number2;             //line A
+				  int product2 = number3 * number4;             //line B
+			}
+		}
+
+Q19 Can you think of other scenarios other than code optimization, where inspecting a compiled code is useful? 
+
+Q20. Have you heard the term “composition should be favored over inheritance“? If yes, what do you understand by this phrase?
+
+Q21. Can you differentiate compile-time inheritance and runtime inheritance with examples and specify which Java supports? 
+
+Q22. How would you go about choosing the right data types for your application?
+
+Q23. When to prefer primitives?
+
+Q24. When working with floating-point data types, what are some of the key considerations?
+
+Q25. What is your understanding of widening versus narrowing conversions of primitive data types?
+
+Q26. What are the dangers of explicit casting?
+
+Q27. Do you think the following code will throw a compile-time exception? If yes, how will you fix it?
+
+Q28. What is the output of the following code snippet?
+
+
+	public class PrePostOperators {
+	 
+		 public static void main(String[ ] args) {
+			 int x = 5;                                          // line 1
+			 int y = ++x;                                        // line 2
+			 int z = y++;                                        // line 3
+			 
+			 System.out.println("x=" + x + ", y=" + y + ", z=" + z); 
+		 }
+	}
+	
+Q29. Can you list some practical applications where the bitwise operations can be applied?
+
+Q30. How much memory space does a primitive type int occupy in Java?
+
+Q31. Java objects get stored in the heap memory space, but how about the primitive variables?
+
+Q32. How much space does java.lang.Integer object occupy?
+
+Q33. How much space does java.lang.Integer[] array with 1 element occupy on a 32 bit JVM?
+
+Q34. Can you arrange the following Collection data types in terms if their memory overheads in ascending order?
+
+Q35. How will you go about evaluating sizeof an object in Java?
+
+Q36. What are the best practices with regard to conserving memory when using Java Collections?
+
+Q37. What do you understand by the terms “autoboxing” and “autounboxing” in Java?
+
+Q38. What are the benefits of autoboxing?
+
+Q39. What are some of the pitfalls of autoboxing?
+
+Q40. How do you know unnecessary objects are being created?
+
+Q41. What will be the output of the following code?
+
+		
+package com.autoboxing;
+
+		public class AutoBoxUnbox {
+
+			public static void main(String[] args) throws InterruptedException {
+				Integer value = 0;
+				new AutoBoxUnbox().eval(value);
+			}
+
+			void eval(long val) {
+				System.out.println(1);
+			}
+
+			 void eval(Long value) {
+				System.out.println(2);
+			}
+		} 
+
+Q42. How will you go about debugging auto boxing and unboxing error?
+
+Q43. What is the difference between “==” and “equals(…)” in comparing Java String objects?
+
+Q44. Can you explain how Strings are interned in Java?
+
+Q45. What will be the output of the following code snippet?
+
+		String s = " Hello ";
+		s += " World ";
+		s.trim( );
+		System.out.println(s);
+		
+Q46. What is the main difference between String, StringBuffer, and StringBuilder?
+
+Q47. Can you write a method that reverses a given String?
+
+Q48. what is flyweight design pattern?		
+
+Q49. Can you give some examples of the usage of the flyweight design pattern in Java?
+
+Q50. What is a static factory method, and when will you use it?
+
+Q51. How will you split the following string of text into individual vehicle types?
+
+	“Car,Jeep, Wagon Scooter Truck, Van”
+	
+	
+Q52. What are the different ways to concatenate strings? and which approach is most efficient?
+
+Q53. Java being a stack based language, allows you to make recursive method calls. Can you write a recursion 
+	 based solution to count the number of A’s in string “AAA rating”?	
+	 
+Q54. How do you stream a string class in Java 8? ★ ♟	 
+				
+				===========================
+						Modifiers
+				===========================
+Q55. In Java, what purpose does the key words final, finally, and finalize fulfill?
+
+Q56. What is the difference between ‘final‘ and ‘const‘ modifiers on a variable?
+
+Q57. What is a volatile key word in Java?
+
+Q58. How does volatile keyword differ from the synchronized keyword?
+
+Q59. What is a “transient” modifier? Can you mark a static variable as transient?
+
+Q60. What value will the following method return?
+
+Q61. What can prevent execution of a code in a finally block?
+
+				===========================
+						Initializers , Constructors and static modifiers
+				===========================
+Q62. What are “static initializers” or “static blocks with no function names” in Java?
+
+Q63. How will you initialize an instance variable say dueDate to first day of next month?
+
+Q64. What is the difference between constructors and other regular methods? What happens if you do not provide a constructor? 
+	Can you call one constructor from another? How do you call the superclass’ constructor?		
+
+Q65. What happens if you do not provide a constructor? 
+
+Q66. Can you call one constructor from another?
+
+Q67. How to call the superclass constructor?
+
+Q68. Why do super(..) and this(..) calls need to be in the first line of a constructor?
+
+Q69. Can constructors have private access modifiers? If yes, can you give an example? 
+
+Q70. What are static factory methods in Java? 
+
+Q71. What are the benefits of static factory methods over using constructors directly?
+				===========================
+						Annotations
+				===========================
+Q72. Are annotations a compile time or run-time feature?
+
+Q73. Are marker or tag interfaces like Serializable, Runnable, etc obsolete with the advent of annotations (i.e. runtime annotations)?	
+
+Q74. What is an annotation, and why are they so popular and used in every framework like Spring, JAX-RS (i.e RESTful web service), JEE 6, and 
+	a lot more? When will you favor XML based meta data over annotations based meta data?
+
+Q75. How will you go about defining a custom annotation? Can you give a practical example?
+
+Q76. What are some of the JAX-RS (i.e RESTful) web service annotations?
+
+Q77. What are some of the widely used Spring annotations?
+
+Q78. What are some of the widely used JEE CDI annotations?
+
+Q79. How would you unit test CDI with JUnit?
+
+Q80. In Servlet 3.0, why is configuring your servlet via deployment descriptor file web.xml optional?
+
+				===========================
+						Annotation-types-processing
+				===========================
+Q81. What do you understand by the terms annotation types, annotations, and annotation processors?
+
+Q82. Can you describe the ways in which annotations can be used at pre-compile time, compile time, post-compile time and runtime?
+
+Q83. What do you understand by annotation of annotation? How do you control when an annotation is need and where an annotation should go?
+
+Q84. What are the different annotation types?
+
